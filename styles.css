@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+body {
+	background-color: #21324C;
+	color: #fff;
+	font-family: 'Indie Flower', cursive;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.text {
+	margin-top: -300px;
+	margin-bottom: 150px;
+	text-align: center;
+}
+
+.text h1 {
+	margin: 5px 0;
+}
+
+.text h3 {
+	margin: 0;
+}
+
+.text a {
+	color: #d52d58;
+	text-decoration: none;
+}
+
+.flower {
+	position: relative;
+	top: -80px;
+	left: -20px;
+}
+
+.flower:nth-of-type(2) {
+	left: -80px;
+	top: -19px;
+	transform: scale(.7);
+}
+
+.flower:nth-of-type(3) {
+	left: 55px;
+	top: -19px;
+	transform: scale(.7);
+}
+
+.flower .petal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #d52d58;
+	border-radius: 0px 30px 0px 30px;
+	width: 30px;
+	height: 60px;
+}
+
+.flower .petal:nth-child(1) {
+	left:-10px;
+	transform: rotate(-10deg);
+	transform-origin: bottom right;
+	background-color: #b81b43;
+	animation: openleft 3s ease-in infinite;
+	z-index: 5;
+}
+
+.flower .petal:nth-child(2) {
+	left:-10px;
+	background-color: #c9204b;
+	z-index: 4;
+
+}
+
+.flower .petal:nth-child(3) {
+	border-radius: 30px;
+	left: 5px;
+}
+
+.flower .petal:nth-child(4) {
+	border-radius: 30px 0px 30px 0px;
+	background-color: #c9204b;
+	left: 20px;
+	z-index: 4;
+}
+
+.flower .petal:nth-child(5) {
+	border-radius: 30px 0px 30px 0px;
+	left: 20px;
+	transform: rotate(10deg);
+	transform-origin: bottom left;
+	animation: openright 3s ease-in infinite;
+	background-color: #b81b43;
+	z-index: 5;
+}
+
+.flower .rod {
+	background-color: #329932;
+	width: 5px;
+	height: 150px;
+	position: absolute;
+	left: 17.5px;
+	top: 58px;
+	z-index: -1;
+}
+
+.flower .rod::before{
+	background-color: lightgreen;
+	border-radius: 3px;
+	content: '';
+	display: block;
+	width: 20px;
+	height: 8px;
+	margin-left:-8px;
+}
+
+.flower .rod .spike {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 20px;
+	left: -10px;
+	border-color: transparent #329932 transparent transparent;
+	border-style: solid;
+	border-width: 5px;
+}
+
+.flower .rod .spike:nth-child(2) {
+	top: 50px;
+	left: 4px;
+	border-color: transparent transparent transparent #329932;
+}
+
+.flower .rod .spike:nth-child(3) {
+	top: 80px;
+}
+
+.flower .rod .spike:nth-child(4) {
+	top: 110px;
+	left: 4px;
+	border-color: transparent transparent transparent #329932;
+}
+
+@keyframes openleft {
+	20%, 80% {
+		transform: rotate(-20deg);
+	}
+}
+
+@keyframes openright {
+	20%, 80% {
+		transform: rotate(20deg);
+	}
+}
+
+.text p {
+  font-size: 30px;
+  margin-top: 180px;
+}
+
+.text2 p{
+	font-size: 30px;
+	margin-top: 10px;
+}
